@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background-image: url("./img/Social Network.png");
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+.sectionl {
+
+  background: linear-gradient(to top right, rgb(59, 56, 56), #222);
+
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+.main-wrapper form {
+  margin-top: 13vh;
+  border-radius: 24px;
+  background: #242424;
+  padding: 9px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.main-wrapper form div {
+  padding: 15px 0;
+}
+
+.main-wrapper form div label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+}
+
+form div input {
+  height: 60px;
+  font-size: 18px;
+  padding: 0 10px;
+  border-radius: 24px;
+  padding: 30px;
+  border: none;
+}
+
+form div button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 30px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 14px;
+  color: rgb(174, 170, 170);
+}
+
+form ul li {
+  color: red;
+}
+
+form ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.3s;
+  background-color: aqua;
+
+}
+
+.no-acc-register {
+  text-align: center;
+  background-color: royalblue;
+  padding: 20px;
+  border-radius: 24px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 20px;
+
+}
+
+.no-acc-register button {
+  padding: 16px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 14px;
+  color: rgb(170, 162, 162);
+  font-size: 18px;
+}
+
+.no-acc-register p {
+  padding: 16px;
+  font-size: 22px;
+}
+
+#registrationForm {
+  padding: 20px;
+}
+
+#registrationForm input {
+  width: 86%;
+  padding: 8px 18px;
+  border: none;
+}
+
+
+#registrationForm label {
+  font-size: 16pt;
+}
+
+.custom-modal {
+  display: none;
+  background: linear-gradient(to top right, rgb(76, 175, 175), royalblue);
+  box-shadow: rgb(222 222 222 / 80%) 0 0 1000px 1000px;
+  padding: 30px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 20px;
+}
+
+
+
+.custom-modal #closeModal {
+  padding: 16px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 14px;
+  color: rgb(170, 162, 162);
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}

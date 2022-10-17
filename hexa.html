@@ -1,0 +1,267 @@
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Hexa</title>
+      <link rel="stylesheet" href="style.css" />
+      <style>
+        h1 {
+          position: absolute;
+          top: 20px;
+        }
+        body {
+          background-color: rgb(50, 180, 255);
+          display: grid;
+          place-content: center;
+        }
+
+        .container {
+          display: flex;
+          gap: 12rem;
+          flex-wrap: wrap;
+          height: 30vh;
+          justify-content: center;
+        }
+
+        .le-container {
+          background: linear-gradient(to top right, rgb(59, 56, 56), #222);
+          text-align: center;
+          width: fit-content;
+          height: fit-content;
+          padding: 20px;
+          border: 2px solid rgb(59, 56, 56);
+          border-radius: 24px;
+          padding: 16px;
+        }
+
+        .le-container img {
+          width: 70%;
+          border-radius: 60%;
+          display: block;
+          margin: auto;
+          border: 3px solid white;
+          margin-bottom: 20px;
+        }
+        .le-container button {
+          cursor: pointer;
+          font-size: 18px;
+          padding: 10px;
+          background-color: aquamarine;
+          border: none;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          color: rgb(174, 170, 170);
+        }
+        .ri-container form {
+          display: flex;
+          height: 100px;
+          gap: 2rem;
+          border: 2px solid royalblue;
+          border-radius: 24px;
+          padding: 20px;
+        }
+        .ri-container form textarea {
+          width: 85%;
+          border: 0;
+          border-radius: 14px;
+          padding: 10px;
+          resize: none;
+          outline-color: royalblue;
+        }
+        .ri-container form button {
+          border: 0;
+          cursor: pointer;
+          font-size: 18px;
+          padding: 10px;
+          background-color: aquamarine;
+          border: none;
+          color: rgb(100, 95, 95);
+          border-radius: 14px;
+        }
+        #DeleteBtn {
+          padding: 10px;
+          border-color: red;
+          color: red;
+          border-radius: 14px;
+        }
+        #postWrapper .single-post {
+          background-color: #eaeaea;
+          padding: 16px;
+          margin-top: 16px;
+          color: #000;
+          border-radius: 24px 0;
+        }
+        #postWrapper .single-post .post-content {
+          padding-bottom: 10px;
+          border-bottom: 2px solid black;
+          margin-bottom: 10px;
+          font-size: 22px;
+        }
+        #postWrapper .post-comments form {
+          height: 30px;
+          margin-top: 15px;
+        }
+        #postWrapper .post-comments form input {
+          width: 85%;
+          padding: 0 16px;
+          border-radius: 24px 0;
+        }
+        #postWrapper .post-comments form button {
+          border-radius: 14px;
+          background-color: grey;
+          border: none;
+          padding: 10px;
+        }
+        #postWrapper .single-post .post-actions {
+          display: flex;
+          justify-content: space-between;
+          color: grey;
+        }
+        #postWrapper .single-post .post-actions div button.like-btn {
+          background-image: url("img/like.png");
+          padding: 5px 15px 6px 40px;
+          background-repeat: no-repeat;
+          background-position: 10px;
+          border-radius: 14px;
+          border: none;
+          border: 0;
+        }
+        #postWrapper .single-post .post-actions div button.comment-btn {
+          background-image: url("img/like.png");
+          padding: 5px 15px 6px 40px;
+          background-repeat: no-repeat;
+          background-position: 10px;
+          border-radius: 14px;
+          border: 0;
+          border: none;
+        }
+        #postWrapper .single-post .post-actions div button.remove-btn {
+          background-color: red;
+          padding: 5px 15px;
+          border: none;
+          color: white;
+          border-radius: 14px;
+        }
+        #postWrapper .single-post .post-comments form {
+          height: fit-content;
+          margin-top: 16px;
+        }
+        #postWrapper .single-post .post-comments form input {
+          width: 86%;
+          padding: 8px 18px;
+          border: none;
+        }
+        #postWrapper .single-post .post-comments form button {
+          background-color: grey;
+          color: #fff;
+        }
+
+        #postWrapper .single-post .post-comments {
+          display: none;
+        }
+        #postWrapper .single-post .post-comments .single-comment {
+          border: 2px solid rgb(59, 56, 56);
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 24px 0;
+        }
+        .custom-modal {
+          background: linear-gradient(
+            to top right,
+            rgb(76, 175, 175),
+            royalblue
+          );
+          box-shadow: rgb(222 222 222 / 80%) 0 0 1000px 1000px;
+          padding: 30px;
+          width: fit-content;
+          height: fit-content;
+          text-align: center;
+          margin: auto;
+          position: relative;
+          top: 20px;
+        }
+        .custom-modal form {
+          padding: 20px;
+          width: 16vh;
+        }
+        .custom-modal form input {
+          width: 86%;
+          padding: 8px 18px;
+          border: none;
+        }
+
+        @media (max-width: 390px) {
+          .custom-modal {
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 60px;
+            border-radius: 20px;
+            overflow: hidden;
+          }
+
+          .custom-modal form {
+            padding: 10px;
+            width: 30vh;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Dobrodosli!!!</h1>
+
+      <div class="container">
+        <div class="le-container">
+          <img src="img/download.jfif" class="profile" />
+          <p><b id="username"></b></p>
+          <p id="email"></p>
+          <button id="editAccount">Izmeni profil</button>
+          <button id="logout">Odjavi se</button>
+        </div>
+
+        <div class="ri-container">
+          <form id="postForm">
+            <textarea
+              id="postContent"
+              placeholder="Napisi nesto i objavi..."
+            ></textarea>
+            <button>Objavi</button>
+          </form>
+          <div id="postWrapper"></div>
+        </div>
+      </div>
+
+      <div class="custom-modal">
+        <button id="closeModal">X</button>
+        <form id="editForm">
+          <h2>Izmijeni svoj profil</h2>
+
+          <div>
+            <label for="korisnicko_ime">Korisnicko ime:</label>
+            <input type="text" name="korisnicko_ime" id="korisnicko_ime" />
+          </div>
+
+          <div>
+            <label for="edit_email">Email adresa:</label>
+            <input type="text" name="register_email" id="edit_email" />
+          </div>
+
+          <div>
+            <button>Izmijeni</button>
+          </div>
+        </form>
+
+        <hr />
+        <button id="DeleteBtn">IZBRISI NALOG</button>
+      </div>
+
+      <script src="js/Session.js"></script>
+      <script src="js/User.js"></script>
+      <script src="js/Comment.js"></script>
+      <script src="js/Post.js"></script>
+      <script src="js/hexa.js"></script>
+    </body>
+  </html>
+</html>

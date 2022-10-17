@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hexa</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <form id="loginForm">
+        <h2>Login</h2>
+
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" id="login_email" />
+        </div>
+
+        <div>
+          <label>Lozinka:</label>
+          <input
+            type="password"
+            name="lozinka"
+            id="login_lozinka"
+            placeholder="***"
+          />
+        </div>
+        <div>
+          <button>Uloguj se</button>
+        </div>
+      </form>
+      <div class="no-acc-register">
+        <p>Nemas Nalog?</p>
+        <button id="registracija">Registruj se</button>
+      </div>
+    </div>
+
+    <div class="custom-modal">
+      <button id="closeModal">X</button>
+
+      <form id="registrationForm">
+        <h2>Registracija Korisnika</h2>
+
+        <div>
+          <label for="korisnicko_ime">Korisnicko ime:</label>
+          <input type="text" name="korisnicko_ime" id="korisnicko_ime" />
+        </div>
+
+        <div>
+          <label for="email">Email adresa:</label>
+          <input type="text" name="register_email" id="email" />
+        </div>
+
+        <div>
+          <label for="lozinka">Lozinka</label>
+          <input type="password" name="register_lozinka" id="lozinka" />
+        </div>
+
+        <div>
+          <label for="ponovi_lozinku">Ponovi Lozinku:</label>
+          <input type="password" name="ponovi_lozinku" id="ponovi_lozinku" />
+        </div>
+
+        <div>
+          <button>Registruj se</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/Validator.js"></script>
+    <script src="js/Session.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
